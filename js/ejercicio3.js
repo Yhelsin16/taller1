@@ -14,6 +14,6 @@ let aprendices =[
     {primernombre:"Jennifer", primerapellido:"Fajardo"}
 ]
 
-let nombrecompleto= aprendices.map(function(el, in, or){
-    return'${el.primernombre} ${el.primerapellido}'
+let nombrecompleto= aprendices.map(function(el, i, or){
+    return`${el.primernombre} ${el.primerapellido}`
 })

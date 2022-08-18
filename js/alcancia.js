@@ -9,4 +9,4 @@ let resp=true;
 
         resp=confirm("Desea continuar?");
     }
-    console.log ('Usted tiene  ${acomulador} y ha ingresado ${contador}');
+    console.log (`Usted tiene  ${acomulador} y ha ingresado ${contador}`);
