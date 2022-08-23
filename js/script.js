@@ -6,7 +6,7 @@ let numero=25;
 console.log ("El numero es ", numero);
 console.log(`El numero es ${numero}`);
 
-let nombre="Stefania";
+let nombre="Yhelsin";
 console.log(`El nombre es ${nombre}`);
 
 let boolean= true;
