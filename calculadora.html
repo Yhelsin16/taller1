@@ -14,16 +14,19 @@
 
 <div class="container">  
     <form id="contact" action="" method="post">
-      <h3>Calculadora</h3>
+      <h3><center>Calculadora</center></h3>
       <h4>Puedes hacer la operacion matematica basica que desees!</h4>
+
       <fieldset>
         <label for="num1" class="form-label">Ingresa un numero</label>
         <input type="number" class="form-control" id="num1">
       </fieldset>
+
       <fieldset>
         <label for="num2" class="form-label">Ingresa otro numero</label>
             <input type="number" class="form-control" id="num2">
       </fieldset>
+
       <fieldset>
         <label>Seleccione una operacion</label>
             <select class="form-select" id="operacion">
@@ -33,10 +36,23 @@
                 <option value="3">Multiplicacion</option>
                 <option value="4">Division</option>
             </select>
+           <!---<fieldset>
+              <div id="ops">
+                 <button id="btn-suma" type="submit" >Suma</button>
+                 <button id="btn-resta" type="submit" >resta</button>
+               </div>
+             </fieldset>
+ 
+            <fieldset>
+              <div id="respuesta">
+              </div>
+            </fieldset>-->
       </fieldset>
+
       <fieldset>
-        <button name="submit" type="submit" id="contact-submit" data-submit="...Sending" class="btn-azul" onclick="calcular()">Calcular</button>
+        <button id="boton" name="submit" type="submit" id="contact-submit" data-submit="...Sending" class="btn-azul" onclick="funcion()">Calcular</button>
       </fieldset>
+
     </form>
   </div>
 </body>
