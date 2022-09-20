@@ -19,8 +19,4 @@ function calcular(){
         alert(`El primer numero es ${num1} y el segundo numero ${num2} la division es ${res}`)
    
     }
-    
-    
-    
-    
 }

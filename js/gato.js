@@ -18,6 +18,4 @@ opciones.addEventListener('clic', (e)=>{
         resp.innerHTML=`respuesta incorrecta`;
         resp.classList.add("incorrecto")
     } 
-
-
 })

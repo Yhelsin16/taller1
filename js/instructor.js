@@ -1,13 +1,12 @@
 const opc=document.getElementById("opc");
 const rta=document.getElementById("respuesta")
-opc.addEventListener('clic',(e)=>{
+opc.addEventListener('click',(e)=>{
     console.log(e.target.id)    
     e.preventDefault();
 
     let nom=document.getElementById("nombre").value;
     let ape=document.getElementById("apellido").value;
     let act=document.getElementById("actividad").value;
-
 
     
     if (nom==1 && ape==1 && act==1) {

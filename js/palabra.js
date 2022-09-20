@@ -15,11 +15,7 @@ function iniciar(){
         alert(`La palabra "${palabra}", en minuscula ${palabra.toLowerCase()}`)
    
     }else if(op==4){
-        alert(`El primer caracter de "${palabra}" es ${palabra.charAt(0)}`)
+        alert(`El primer carácter de "${palabra}" es ${palabra.charAt(0)}`)
    
     }
-    
-    
-    
-    
 }
