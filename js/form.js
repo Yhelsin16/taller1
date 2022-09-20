@@ -10,6 +10,15 @@ const reglas={
     password:/^(?=.+\d)(?=.*[#$%&!@])(?=.*[a-z])(?=.*[A-Z]).{8,}$/ //PASSWORD
 }
 
+const inputs={
+    numdoc:false,
+    nombre:false,
+    apellido:false,
+    correo:false,
+    telefono:false,
+    password:false
+}
+
 let form=document.getElementById("frm-usuario");
 let campos=document.querySelectorAll("#frm-usuario input")
 form.addEventListener('submit',e=>{
@@ -24,13 +33,14 @@ const validarInput=(regla,input,grupo)=>{
         document.querySelector(`#g-${grupo} i`).classList.add('fa-circle-check')
         document.querySelector(`#g-${grupo} i`).classList.remove('fa-circle-exclamation')
         document.querySelector(`#g-${grupo}  .msn-error`).classList.remove('msn-error-visible')
+        inputs[grupo]=true;
     }else{
         document.getElementById(`g-${grupo}`).classList.remove('success');
         document.getElementById(`g-${grupo}`).classList.add('error');
         document.querySelector(`#g-${grupo} i`).classList.remove('fa-circle-check')
         document.querySelector(`#g-${grupo} i`).classList.add('fa-circle-exclamation')
         document.querySelector(`#g-${grupo} .msn-error`).classList.add('msn-error-visible')
-    
+        inputs[grupo]=false;
     }
 } 
 
@@ -99,4 +109,25 @@ const validarCampos=(e)=>{
 campos.forEach((campo)=>{
  campo.addEventListener("keyup",validarCampos);
  campo.addEventListener("blur",validarCampos)
+})
+
+form.addEventListener('submit',e=>{
+    e.preventDefault();
+    const terminos=document.getElementById("terminos");
+    console.log(form.input.numdoc);
+    if(inputs.numdoc && inputs.nombre && inputs.apellido && 
+       inputs.correo && inputs.telefono && inputs.password && terminos.checked){
+        alert("El usuario ha sido registrado")
+        form.reset()
+        document.querySelectorAll('.success').forEach(icono=>{
+            icono.classList.remove('success')
+        })
+       }
+       else{
+        //Hacer que se muestren los iconos de error de los inputs
+        //Mostrar los mensajes de validacion
+        document.querySelectorAll('.success').forEach(icono=>{
+            icono.classList.add('error')
+        })
+       }
 })
