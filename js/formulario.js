@@ -8,7 +8,7 @@ const expresiones = {
 	apellido: /^[a-zA-ZÀ-ÿ\s]{1,40}$/,
 	fechaNa: /^\d{4}[\/\-](0?[1-9]|1[012])[\/\-](0?[1-9]|[12][0-9]|3[01])$/, // Debe llevar el formato dia, mes, año.
 	password: /^.{4,12}$/, // 4 a 12 digitos.
-	correo: /^[a-zA-Z0-9_.+-]+@+[m]+[i]+[s]+[e]+[n]+[a]+.[e][d][u]+.[c]+[o]$/,
+	correo:/^[a-zA-Z0-9_+-.]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$/, //CORREOS
 }
 
 const campos = {
