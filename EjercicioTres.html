@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="css/estilo_ejercicios.css">
+    <title>Convertidor Ejercicio 3</title>
+</head>
+
+<body>
+        
+    <div class="container">  
+      <form id="contact" action="" method="post">
+        <h3><center>Conversor de temperaturas</center></h3>
+          <h4>Escoge una temperatura y cambiala a otra que desees!!<h4>
+            <fieldset>
+        <label for="" class="form-label">Temperatura inicial</label>
+        <select class="form-select" aria-label="Default select example" id="s1">
+            <option selected>- - -</option>
+            <option value="1">Fahrenheit</option>
+            <option value="2">Celsius</option>
+            <option value="3">Kelvin</option>
+        </select>
+            </fieldset>
+            <fieldset>
+        <label for="" class="form-label">Temperatura a la que desea Convertir</label>
+        <select class="form-select" aria-label="Default select example" id="s2">
+            <option selected>- - -</option>
+            <option value="4">Fahrenheit</option>
+            <option value="5">Celsius</option>
+            <option value="6">Kelvin</option>
+        </select>
+            </fieldset>
+            <fieldset>
+        <div class="mb-3">
+            <label for="" class="form-label">Digite la temperatura</label>
+            <input type="number" class="form-control" id="s3"
+                aria-placeholder="Ingrese el numero de grados de temperatura que desea convertir">
+        </div>
+      </fieldset>
+      <fieldset>
+        <center>
+            <button type="submit" class="btn btn-success" id="botton">CALCULAR</button>
+        </center>
+      </fieldset>
+    </div>
+    <script src="js/EjercicioTres.js"></script>
+  </form>
+</body>
+
+</html>

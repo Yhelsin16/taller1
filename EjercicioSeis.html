@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+        integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="css/EjercicioSeis.css">
+    <title>Ejercicio 6 Area y perimetro</title>
+</head>
+
+<body>
+
+    <nav>
+        <h1>Ejercicio 6 Area y perimetro de figuras</h1>
+    </nav>
+
+    <div class="container">
+
+        <div class="row row-cols-1 row-cols-md-2 g-4">
+            <div class="col">
+                <div class="card">
+                    <img src="img/cuadrado.jpg" class="card-img-top" alt="..." width="150" height="300">
+                    <div class="card-body">
+                        <center><h5 class="card-title">CUADRADO</h5>
+                        <p class="card-text">Calcula el area y el perimetro del Cuadrado.</p>
+                        <button type="button" class="btn btn-primary" id="am">PERIMETRO</button>
+                        <button type="button" class="btn btn-success" id="dm">AREA</button></center>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card">
+                    <img src="img/triangulo.png" class="card-img-top" alt="..." width="100" height="300">
+                    <div class="card-body">
+                        <center><h5 class="card-title">TRIANGULO</h5>
+                        <p class="card-text">Calcula el area y el perimetro del Triangulo.</p>
+                        <button type="button" class="btn btn-primary" id="em">PERIMETRO</button>
+                        <button type="button" class="btn btn-success" id="mm">AREA</button></center>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card">
+                    <img src="img/rectangulo.jpg" class="card-img-top" alt="..." width="80" height="300">
+                    <div class="card-body">
+                        <center><h5 class="card-title">RECTANGULO</h5>
+                        <p class="card-text">Calcula el area y el perimetro del Rectangulo.</p>
+                        <button type="button" class="btn btn-primary" id="im">PERIMETRO</button>
+                        <button type="button" class="btn btn-success" id="arm">AREA</button></center>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card">
+                    <img src="./img/Circulo.png" class="card-img-top" alt="..." width="60" height="300">
+                    <div class="card-body">
+                         <center><h5 class="card-title">CIRCULO</h5>
+                        <p class="card-text">Calcula el area y el perimetro del Circulo.</p>
+                       <button type="button" class="btn btn-primary" id="ejm">PERIMETRO</button>
+                        <button type="button" class="btn btn-success" id="inm">AREA</button></center>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <div id="vmpc" class="modal">
+        <div class="contenidoModal">
+            <span class="cerrarModal"><i class="fa-sharp fa-solid fa-circle-xmark"></i></span>
+            <h2>PERIMETRO CUADRADO</h2>
+            <form>
+
+                <div class="mb-3">
+                    <label for="" class="form-label">Digite dl lado del Cuadrado</label>
+                    <input type="number" class="form-control" id="lc"
+                        aria-placeholder="Ingrese el valor del lado del cuadrado">
+                </div>
+
+                <center>
+                    <button type="submit" class="btn btn-success" id="bt">CALCULAR</button>
+                </center>
+
+            </form>
+        </div>
+    </div>
+
+    <div id="vmac" class="modal">
+        <div class="contenidoModal">
+            <span class="cerrarModal1"><i class="fa-sharp fa-solid fa-circle-xmark"></i></span>
+            <h2>AREA CUADRADO</h2>
+            <form>
+
+                <div class="mb-3">
+                    <label for="" class="form-label">Digite el lado del Cuadrado</label>
+                    <input type="number" class="form-control" id="cl"
+                        aria-placeholder="Ingrese el valor del lado del cuadrado">
+                </div>
+
+                <center>
+                    <button type="submit" class="btn btn-success" id="bo">CALCULAR</button>
+                </center>
+
+            </form>
+        </div>
+    </div>
+
+    <div id="vmpt" class="modal">
+        <div class="contenidoModal">
+            <span class="cerrarModal2"><i class="fa-sharp fa-solid fa-circle-xmark"></i></span>
+            <h2>PERÍMETRO TRIÁNGULO</h2>
+            <form>
+
+                <div class="mb-3">
+                    <label for="" class="form-label">Digite dl primer lado del Triángulo</label>
+                    <input type="number" class="form-control" id="ltp"
+                        aria-placeholder="Ingrese el valor del primer lado del triángulo">
+                </div>
+
+                <div class="mb-3">
+                    <label for="" class="form-label">Digite el segundo lado del Triángulo</label>
+                    <input type="number" class="form-control" id="lts"
+                        aria-placeholder="Ingrese el valor del segundo lado del triángulo">
+                </div>
+
+                <div class="mb-3">
+                    <label for="" class="form-label">Digite el tercer lado del Triángulo</label>
+                    <input type="number" class="form-control" id="ltt"
+                        aria-placeholder="Ingrese el valor del tercer lado del triángulo">
+                </div>
+
+                <center>
+                    <button type="submit" class="btn btn-success" id="ob">CALCULAR</button>
+                </center>
+
+            </form>
+        </div>
+    </div>
+
+    <div id="vmat" class="modal">
+        <div class="contenidoModal">
+            <span class="cerrarModal3"><i class="fa-sharp fa-solid fa-circle-xmark"></i></span>
+            <h2>AREA TRIANGULO</h2>
+            <form>
+
+                <div class="mb-3">
+                    <label for="" class="form-label">Digite la base del Triángulo</label>
+                    <input type="number" class="form-control" id="bat"
+                        aria-placeholder="Ingrese el valor de la base del triángulo">
+                </div>
+
+                <div class="mb-3">
+                    <label for="" class="form-label">Digite la altura del Triángulo</label>
+                    <input type="number" class="form-control" id="alt"
+                        aria-placeholder="Ingrese el valor de la altura del triángulo">
+                </div>
+
+                <center>
+                    <button type="submit" class="btn btn-success" id="obo">CALCULAR</button>
+                </center>
+
+            </form>
+        </div>
+    </div>
+
+    <div id="vmpr" class="modal">
+        <div class="contenidoModal">
+            <span class="cerrarModal4"><i class="fa-sharp fa-solid fa-circle-xmark"></i></span>
+            <h2>PERIMETRO RECTANGULO</h2>
+            <form>
+
+                <div class="mb-3">
+                    <label for="" class="form-label">Digite la base del Rectángulo</label>
+                    <input type="number" class="form-control" id="alr"
+                        aria-placeholder="Ingrese el valor de la base del rectángulo">
+                </div>
+
+                <div class="mb-3">
+                    <label for="" class="form-label">Digite la altura del Rectángulo</label>
+                    <input type="number" class="form-control" id="anr"
+                        aria-placeholder="Ingrese el valor de la altura del rectángulo">
+                </div>
+
+                <center>
+                    <button type="submit" class="btn btn-success" id="bur">CALCULAR</button>
+                </center>
+
+            </form>
+        </div>
+    </div>
+
+    <div id="vmar" class="modal">
+        <div class="contenidoModal">
+            <span class="cerrarModal5"><i class="fa-sharp fa-solid fa-circle-xmark"></i></span>
+            <h2>AREA RECTANGULO</h2>
+            <form>
+
+                <div class="mb-3">
+                    <label for="" class="form-label">Digite la base del Rectángulo</label>
+                    <input type="number" class="form-control" id="bar"
+                        aria-placeholder="Ingrese el valor de la base del rectángulo">
+                </div>
+
+                <div class="mb-3">
+                    <label for="" class="form-label">Digite la altura del Rectángulo</label>
+                    <input type="number" class="form-control" id="altr"
+                        aria-placeholder="Ingrese el valor de la altura del rectángulo">
+                </div>
+
+                <center>
+                    <button type="submit" class="btn btn-success" id="br">CALCULAR</button>
+                </center>
+
+            </form>
+        </div>
+    </div>
+
+    <div id="vmpcc" class="modal">
+        <div class="contenidoModal">
+            <span class="cerrarModal6"><i class="fa-sharp fa-solid fa-circle-xmark"></i></span>
+            <h2>PERIMETRO CIRCULO</h2>
+            <form>
+
+                <div class="mb-3">
+                    <label for="" class="form-label">Digite el radio del Círculo</label>
+                    <input type="number" class="form-control" id="rc"
+                        aria-placeholder="Ingrese el valor del radio del círculo">
+                </div>
+
+                <center>
+                    <button type="submit" class="btn btn-success" id="bpc">CALCULAR</button>
+                </center>
+
+            </form>
+        </div>
+    </div>
+
+    <div id="vmacc" class="modal">
+        <div class="contenidoModal">
+            <span class="cerrarModal7"><i class="fa-sharp fa-solid fa-circle-xmark"></i></span>
+            <h2>AREA CIRCULO</h2>
+            <form>
+
+                <div class="mb-3">
+                    <label for="" class="form-label">Digite el radio del Círculo</label>
+                    <input type="number" class="form-control" id="rrc"
+                        aria-placeholder="Ingrese el valor del radio del círculo">
+                </div>
+
+                <center>
+                    <button type="submit" class="btn btn-success" id="brc">CALCULAR</button>
+                </center>
+
+            </form>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa"
+        crossorigin="anonymous"></script>
+    <script src="js/EjercicioSeis.js"></script>
+</body>
+
+</html>

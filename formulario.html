@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Validación de Formulario con Javascript</title>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+		integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
+		crossorigin="anonymous" referrerpolicy="no-referrer" />
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet"
+		integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+	<link rel="stylesheet" href="css/formulario.css">
+</head>
+
+<body>
+	<center>
+		<nav>
+			<h1><a href="index.html">Registro y validaciones</a></h1>
+		</nav>
+	</center>
+	<main>
+		<form action="" class="formulario" id="formulario">
+
+			<div class="mb-3 formulario__grupo" id="grupo__tipoDoc">
+				<label for="tipoDocumento" class="formulario__label">Seleccione Su Tipo De Documento</label>
+				<select class="form-select formulario__input" aria-label="Default select example">
+					<option>Selecciona Tu Tipo De Documento</option>
+					<option id="tipoDoc" name="tipoDoc" value="1">Cedula De Ciudadania</option>
+					<option id="tipoDoc" name="tipoDoc" value="2">Tarjeta De Identidad</option>
+				</select>
+				<i class="formulario__validacion-estado fas fa-times-circle"></i>
+				<p class="formulario__input-error">No ha seleccionado ningun tipo de documento valido. por favor
+					seleccione
+					una opcion valida.
+				</p>
+			</div>
+			<!-- Grupo: Nombre -->
+			<div class="formulario__grupo" id="grupo__numDoc">
+				<label for="numDoc" class="formulario__label">Numero de documentos</label>
+				<div class="formulario__grupo-input">
+					<input type="number" class="formulario__input" name="numDoc" id="numDoc">
+					<i class="formulario__validacion-estado fas fa-times-circle"></i>
+				</div>
+				<p class="formulario__input-error">El usuario tiene que ser de 5 a 10 numeros sin letras ni guiones.</p>
+			</div>
+
+			<div class="formulario__grupo" id="grupo__nombre">
+				<label for="nombre" class="formulario__label">Nombre</label>
+				<div class="formulario__grupo-input">
+					<input type="text" class="formulario__input" name="nombre" id="nombre">
+					<i class="formulario__validacion-estado fas fa-times-circle"></i>
+				</div>
+				<p class="formulario__input-error">El usuario tiene que ser de 5 a 20 letras mayusculas o minusculas.
+				</p>
+			</div>
+
+			<div class="formulario__grupo" id="grupo__apellido">
+				<label for="apellido" class="formulario__label">Apellido</label>
+				<div class="formulario__grupo-input">
+					<input type="text" class="formulario__input" name="apellido" id="apellido">
+					<i class="formulario__validacion-estado fas fa-times-circle"></i>
+				</div>
+				<p class="formulario__input-error">El usuario tiene que ser de 4 a 16 dígitos y solo puede contener
+					numeros, letras y guion bajo.</p>
+			</div>
+
+			<div class="mb-3 formulario__grupo" id="grupo__fechaNa">
+				<label for="fechaNa" class="formulario__label">Seleccione Su Fecha De Nacimiento</label>
+				<div class="formulario__grupo-input">
+					<input type="date" class="form-control formulario__input" id="fechaNa" name="fechaNa"
+						aria-placeholder="Ingrese Su Fecha De Nacimiento">
+					<i class="formulario__validacion-estado fas fa-times-circle"></i>
+				</div>
+				<p class="formulario__input-error">La fecha de nacimiento debe llevar su respectivo dia, mes y año
+					una fecha valida.
+				</p>
+			</div>
+			<!-- Grupo: Contraseña -->
+			<div class="formulario__grupo" id="grupo__password">
+				<label for="password" class="formulario__label">Contraseña</label>
+				<div class="formulario__grupo-input">
+					<input type="password" class="formulario__input" name="password" id="password">
+					<i class="formulario__validacion-estado fas fa-times-circle"></i>
+				</div>
+				<p class="formulario__input-error">La contraseña tiene que ser de 4 a 12 dígitos.</p>
+			</div>
+
+			<!-- Grupo: Contraseña 2 -->
+			<div class="formulario__grupo" id="grupo__password2">
+				<label for="password2" class="formulario__label">Repetir Contraseña</label>
+				<div class="formulario__grupo-input">
+					<input type="password" class="formulario__input" name="password2" id="password2">
+					<i class="formulario__validacion-estado fas fa-times-circle"></i>
+				</div>
+				<p class="formulario__input-error">sus contraseñas tienen que ser iguales</p>
+			</div>
+
+			<!-- Grupo: Correo Electronico -->
+			<div class="formulario__grupo" id="grupo__correo">
+				<label for="correo" class="formulario__label">Correo Electrónico</label>
+				<div class="formulario__grupo-input">
+					<input type="email" class="formulario__input" name="correo" id="correo">
+					<i class="formulario__validacion-estado fas fa-times-circle"></i>
+				</div>
+				<p class="formulario__input-error">El correo solo puede contener letras, numeros, puntos, guiones y
+					guion bajo.</p>
+			</div>
+			<!-- Grupo: Terminos y Condiciones -->
+			<center><input type="checkbox" class="form-check-input" id="terminos" name="terminos" data-bs-toggle="modal"
+					data-bs-target="#exampleModal">aceptar terminos y condiciones</input></center>
+
+			<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
+				aria-hidden="true">
+				<div class="modal-dialog">
+					<div class="modal-content">
+						<div class="modal-header">
+							<h5 class="modal-title" id="exampleModalLabel">Términos De Uso</h5>
+							<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+						</div>
+						<div class="modal-body">
+							<center>
+								Los términos y condiciones de venta aquí establecidos están vigentes para todo tipo de relación comercial con los clientes de esta empresa: ya sea por concepto o razón de contratos, pagos, entregas, y otros servicios, incluyendo prestación de soluciones técnicas. Cualquier desvío de los presentes términos y condiciones de venta, así como acuerdos complementarios y/o algún otro acuerdo fuera de lo establecido, solo será válido si se encuentra expresamente señalado de nuestra parte por escrito y el resto de los términos y condiciones no serán afectados. el cliente, al admitir los productos y/o servicios, se pensará que han accedido los términos y las condiciones establecidos en este contrato o en cualquier otro documento enviado posteriormente por el vendedor.</center>
+						</div>
+						<div class="modal-footer">
+							<button type="button" class="btn btn-success" data-bs-dismiss="modal">ACEPTAR</button>
+							<button type="button" class="btn btn-danger" data-bs-dismiss="modal">CANCELAR</button>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="formulario__mensaje" id="formulario__mensaje">
+				<p><i class="fas fa-exclamation-triangle"></i> <b>Error:</b> Por favor rellena el formulario
+					correctamente.</p>
+			</div>
+
+			<p class="formulario__mensaje-exito" id="formulario__mensaje-exito"><i class="fa-solid fa-circle-check"></i>
+				Formulario enviado exitosamente!</p>
+
+			
+				<button type="submit" class="btn btn-primary">Ingresar</button>
+			
+
+		</form>
+
+		</div>
+		</form>
+	</main>
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"
+		integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa"
+		crossorigin="anonymous"></script>
+	<script src="js/formulario.js"></script>
+	<script src="https://kit.fontawesome.com/2c36e9b7b1.js" crossorigin="anonymous"></script>
+</body>
+
+</html>
